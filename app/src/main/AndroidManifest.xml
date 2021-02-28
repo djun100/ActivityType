@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lxb.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    <permission android:name="android.permission.DUMP"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".singleInstanceMain"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".A1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".B1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".singleTopB2"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".C1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".singleTaskC2"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="com.lxb.activity.singletask" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".C3"
+            android:launchMode="standard" />
+        <activity
+            android:name=".D1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".singleInstanceD2"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="com.lxb.activity.singleinstance" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".D3"
+            android:launchMode="standard" />
+    </application>
+
+</manifest>
